@@ -1,0 +1,53 @@
+Configuration
+=============
+
+Sphinx must be configured to:
+
+1. Find your project's source code
+2. Correctly display your project's information
+
+``project.py``
+--------------
+
+This file includes the information that Sphinx 
+needs to build a documentation site and LaTeX
+report for your project, as well as the fundamental 
+details of your project that will be rendered across
+the site and report.
+
+.. admonition:: CODE GENERATION
+    :class: danger
+
+    These variables must be correctly set, or
+    Sphinx will fail to run.
+
+    - ``codename``
+        Name of your project's Python package.
+    - ``codedir``
+        Code directory relative to your projects source directory,
+        where the source directory is understood to be the **parent
+        of the docs directory**.
+
+.. admonition:: PROJECT INFORMATION
+    :class: warning
+
+    - ``project``
+    - ``author``
+    - ``report_title``
+    - ``report_author``
+    - ``logo``
+        Logo filename relative to the ``source/figures`` directory.
+
+``project.sty``
+---------------
+
+This file contains information about your project
+as it will be rendered in LaTeX.
+
+.. admonition:: PROJECT INFORMATION
+    :class: warning
+
+    - ``project``
+    - ``institution``
+    - ``logo``
+    - ``colorHeader``

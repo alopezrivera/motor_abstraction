@@ -1,0 +1,40 @@
+Tables
+======
+
+Tables may be input in list or grid format. With conventional
+editors the list format is most convenient. Certain editors may
+greatly ease generating grid tables, making them a viable option
+(ie: Emacs Org Mode).
+
+.. code-block:: reStructuredText
+
+    # Centered table
+    .. _table1:
+    .. list-table:: Example table.
+        :widths: auto
+        :header-rows: 1
+        :align: center
+
+        * - **Header 1**
+          - **Header 2**
+          - **Header 3**
+          - **Header 4**
+        * - A
+          - B
+          - C
+          - D
+
+.. _table1:
+.. list-table:: Example table.
+    :widths: auto
+    :header-rows: 1
+    :align: center
+
+    * - **Header 1**
+      - **Header 2**
+      - **Header 3**
+      - **Header 4**
+    * - A
+      - B
+      - C
+      - D

@@ -1,0 +1,46 @@
+Extensions
+==========
+
+It is possible to extend Sphinx reStructuredText to
+suit unsatisfied needs.
+
+This can be done by creating new
+
+- ``classes``,
+- ``:roles:``, and
+- ``.. directives::``
+
+It is easiest to extend Sphinx's HTML rendering 
+capabilities by creating new CSS classes.
+
+.. admonition:: BEWARE
+    :class: danger
+
+    Extensions using CSS classes will have no
+    effect on LaTeX output. New roles or directives
+    are necessary to such an effect.
+
+Creating new roles and directives is more involved.
+For creating new roles, refer to the `blog post by 
+Doug Hellmann <https://doughellmann.com/posts/defining-custom-roles-in-sphinx/>`_.
+For creating new directives, heed Sphinx forums
+and the online guidance you may find.
+
+The following are the extensions present in this
+Sphinx configuration.
+
+Classes
+-------
+
+Center
+~~~~~~
+
+Center HTML elements. Works with text as well 
+as side-by-side ``images``, section headings, 
+and perhaps any other HTML element.
+
+.. code-block:: reStructuredText
+
+    .. rst-class:: center
+
+        Centered elements.

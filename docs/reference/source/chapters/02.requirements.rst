@@ -1,0 +1,38 @@
+Requirements
+============
+
+.. important::
+
+    Sphinx needs to complete two tasks to generate a documentation
+    site and report for your project:
+
+    - Sphinx needs to successfully **scan your source code** for documentation in the form of docstrings, and
+    - Sphinx needs to successfully **render your documentation**.
+
+Care for the structure of your source code and the syntax of 
+your documentation sources is fundamental.
+
+Source code structure
+---------------------
+
+Say that you want to create documentation from the docstrings
+in your code. **Two conditions**:
+
+- Your project must be a Python **package**
+- Your **package** must have a ``__version__`` global variable
+
+.. admonition:: Global variables
+    :class: note
+
+    You can declare the ``__version__`` in the ``__init__.py`` of
+    your project's Python package.
+
+    If your project consists of a single script, you can declare
+    it anywhere in your script.
+
+
+Writing docstrings successfully
+-------------------------------
+
+- Use raw strings.
+- Write reStructuredText (:ref:`Primer`).
