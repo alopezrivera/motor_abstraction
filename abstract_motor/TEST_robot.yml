@@ -1,0 +1,30 @@
+motor_1:
+  manufacturer:      'TEST_motor'
+  model:             'TestMotor'
+  can_port:          'can0'
+  motor_id:          0x00
+  # Comms
+  protocol:          'lcm'
+  generate_bindings: False
+  topic:             'topic1'
+  freq:              1000
+  # Mechanical
+  kp:                1
+  kd:                1
+  torque_limit:      10
+  rest_state:        [0, 0, 0, 0, 0]
+motor_2:
+  manufacturer:      'TEST_motor'
+  model:             'TestMotor'
+  can_port:          'can0'
+  motor_id:          0x01
+  # Comms
+  protocol:          'lcm'
+  generate_bindings: False
+  topic:             'topic2'
+  freq:              1000
+  # Mechanical
+  kp:                1
+  kd:                1
+  torque_limit:      10
+  rest_state:        [1, 1, 1, 1, 1]
