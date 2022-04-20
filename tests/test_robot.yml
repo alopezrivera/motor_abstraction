@@ -1,5 +1,5 @@
 motor_1:
-  manufacturer:      'TEST_motor'
+  manufacturer:      'mock.motor'
   model:             'TestMotor'
   can_port:          'can0'
   motor_id:          0x00
@@ -14,7 +14,7 @@ motor_1:
   torque_limit:      10
   rest_state:        [0, 0, 0, 0, 0]
 motor_2:
-  manufacturer:      'TEST_motor'
+  manufacturer:      'mock.motor'
   model:             'TestMotor'
   can_port:          'can0'
   motor_id:          0x01
