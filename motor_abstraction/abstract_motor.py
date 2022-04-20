@@ -5,16 +5,30 @@ Abstract Motor Class
 
 from abc import ABC, abstractmethod
 
-from utils.shout import shout_disabled
-from utils.fallback import fallback_disable
-from utils.exceptions import SafetyException, ConfigurationError
+from motor_abstraction.utils.shout import shout_disabled
+from motor_abstraction.utils.fallback import fallback_disable
+from motor_abstraction.utils.exceptions import SafetyException, ConfigurationError
 
 
 class AbstractMotor(ABC):
 
     def __getattribute__(self, name):
         """
-        Retrieve unknown attributes from motor object.
+        **Override attribute retrieval.**
+
+        Conduct motor configuration validation at attribute
+        retrieval time, and apply boilerplate to communicate
+        the motor's state after all commands and provide the
+        user with logs.
+
+        1. Motor configuration validation
+            - Ensure motor instance has all required attributes
+            - Ensure motor instance has a declared ``rest_state`` 
+              before calling any function other than ``__init__`` 
+              or ``rest_state``
+        2. Function boilerplate
+            - Push motor state via provided communication protocol after all motor commands
+            - Log motor disabling
         """
 
         get = lambda obj, attr: super(ABC, obj).__getattribute__(attr)
