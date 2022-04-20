@@ -4,7 +4,7 @@ project = 'Project'
 author  = 'Author'
 
 # Project code name
-codename = 'project'
+codename = 'motor_abstraction'
 
 # Project code directory
 codedir = '.'
