@@ -1,0 +1,3 @@
+.center:not(.section), .center>h1, .center>h2 {
+    text-align: center;
+}

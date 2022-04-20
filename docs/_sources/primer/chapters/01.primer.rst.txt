@@ -1,0 +1,52 @@
+Primer
+======
+
+.. admonition:: References
+    :class: note
+
+    For a more in-depth and possibly up-to-date description of the
+    capabilities of reStructuredText and Sphinx, refer to the 
+    `Sphinx reStructuredText primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer>`_.
+
+    Other references:
+
+    - `reStructuredText reference: figures <https://docutils.sourceforge.io/docs/ref/rst/directives.html#images>`_
+    - `reStructuredText reference: directives <https://docutils.sourceforge.io/docs/ref/rst/directives.html>`_
+
+**reStructuredText** allows you flexibility close to that of
+LaTeX with terser syntax. Both LaTeX and HTML are rendered 
+from it, abstracting content from typesetting. Sphinx reStructuredText 
+supports LaTeX math, citations, cross-refernces, lists, figures, tables, 
+text highlight markup, file inclusion and more.
+
+.. admonition:: Benefits
+    :class: important
+
+    - Write a **singular**, **pleasant to read** documentation source for your project.
+    - Customize LaTeX and HTML output with **content agnostic** LaTeX style files and HTML+CSS templates (starting with Sphinx's) **usable across all your projects**.
+    
+    And lastly,
+
+    - Document your project directly from the **docstrings** of your code.
+
+What follows is a demonstration of the fundamental capabilities
+of Sphinx reStructuredText for technical writing, as well as
+best practices for writing and generating documentation with Sphinx.
+
+Much of the same will be demonstrated again in :ref:`Your Project`,
+with a twist: :ref:`Your Project` is generated directly from the
+source code in this project.
+
+.. admonition:: MIND THE BACKTICKS
+    :class: danger
+
+    reStructuredText makes use of **backticks** (U+0060 *GRAVE ACCENT*)
+    for its commands. 
+    
+    **Not to be confused for apostrophes (** ``'`` **)!**
+
+.. toctree::
+    :glob:
+    :caption: Table of Contents
+
+    01.primer/*

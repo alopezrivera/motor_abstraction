@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="motor_abstraction.utils.fallback.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="motor_abstraction.utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Motor Abstraction
+            <img src="_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="motor_abstraction.abstract_motor.html">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="motor_abstraction.html">&lt;no title&gt;</a> &raquo;</li>
+          <li><a href="motor_abstraction.utils.html">&lt;no title&gt;</a> &raquo;</li>
+      <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/motor_abstraction.utils.exceptions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-motor_abstraction.utils.exceptions"></span><dl class="py exception">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_AddendumException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception with addendum for user guidance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__cause__">
+<span class="sig-name descname"><span class="pre">__cause__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__cause__" title="Permalink to this definition"></a></dt>
+<dd><p>exception cause</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__context__">
+<span class="sig-name descname"><span class="pre">__context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__context__" title="Permalink to this definition"></a></dt>
+<dd><p>exception context</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__delattr__">
+<span class="sig-name descname"><span class="pre">__delattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__delattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__dict__">
+<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'motor_abstraction.utils.exceptions',</span> <span class="pre">'__doc__':</span> <span class="pre">'\n</span>&#160;&#160;&#160; <span class="pre">Exception</span> <span class="pre">with</span> <span class="pre">addendum</span> <span class="pre">for</span> <span class="pre">user</span> <span class="pre">guidance.\n</span>&#160;&#160;&#160; <span class="pre">',</span> <span class="pre">'__init__':</span> <span class="pre">&lt;function</span> <span class="pre">_AddendumException.__init__&gt;,</span> <span class="pre">'__weakref__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__weakref__'</span> <span class="pre">of</span> <span class="pre">'_AddendumException'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__annotations__':</span> <span class="pre">{}})</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__dict__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__getattribute__">
+<span class="sig-name descname"><span class="pre">__getattribute__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__getattribute__" title="Permalink to this definition"></a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__module__">
+<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'motor_abstraction.utils.exceptions'</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__module__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__new__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__reduce__">
+<span class="sig-name descname"><span class="pre">__reduce__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__reduce__" title="Permalink to this definition"></a></dt>
+<dd><p>Helper for pickle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__setattr__">
+<span class="sig-name descname"><span class="pre">__setattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__setattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__setstate__">
+<span class="sig-name descname"><span class="pre">__setstate__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__setstate__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__suppress_context__">
+<span class="sig-name descname"><span class="pre">__suppress_context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__suppress_context__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__traceback__">
+<span class="sig-name descname"><span class="pre">__traceback__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__traceback__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.__weakref__">
+<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.__weakref__" title="Permalink to this definition"></a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions._AddendumException.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions._AddendumException.with_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConfigurationError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#motor_abstraction.utils.exceptions._AddendumException" title="motor_abstraction.utils.exceptions._AddendumException"><code class="xref py py-class docutils literal notranslate"><span class="pre">motor_abstraction.utils.exceptions._AddendumException</span></code></a></p>
+<p>Raised when configuration errors are detected.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__annotations__">
+<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__annotations__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__cause__">
+<span class="sig-name descname"><span class="pre">__cause__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__cause__" title="Permalink to this definition"></a></dt>
+<dd><p>exception cause</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__context__">
+<span class="sig-name descname"><span class="pre">__context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__context__" title="Permalink to this definition"></a></dt>
+<dd><p>exception context</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__delattr__">
+<span class="sig-name descname"><span class="pre">__delattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__delattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__dict__">
+<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'motor_abstraction.utils.exceptions',</span> <span class="pre">'__doc__':</span> <span class="pre">'\n</span>&#160;&#160;&#160; <span class="pre">Raised</span> <span class="pre">when</span> <span class="pre">configuration</span> <span class="pre">errors</span> <span class="pre">are</span> <span class="pre">detected.\n</span>&#160;&#160;&#160; <span class="pre">',</span> <span class="pre">'__annotations__':</span> <span class="pre">{}})</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__dict__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__getattribute__">
+<span class="sig-name descname"><span class="pre">__getattribute__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__getattribute__" title="Permalink to this definition"></a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__module__">
+<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'motor_abstraction.utils.exceptions'</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__module__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__new__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__reduce__">
+<span class="sig-name descname"><span class="pre">__reduce__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__reduce__" title="Permalink to this definition"></a></dt>
+<dd><p>Helper for pickle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__setattr__">
+<span class="sig-name descname"><span class="pre">__setattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__setattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__setstate__">
+<span class="sig-name descname"><span class="pre">__setstate__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__setstate__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__suppress_context__">
+<span class="sig-name descname"><span class="pre">__suppress_context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__suppress_context__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__traceback__">
+<span class="sig-name descname"><span class="pre">__traceback__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__traceback__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.__weakref__">
+<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.__weakref__" title="Permalink to this definition"></a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.ConfigurationError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.ConfigurationError.with_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SafetyException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#motor_abstraction.utils.exceptions._AddendumException" title="motor_abstraction.utils.exceptions._AddendumException"><code class="xref py py-class docutils literal notranslate"><span class="pre">motor_abstraction.utils.exceptions._AddendumException</span></code></a></p>
+<p>Raised when operational safety is compromised.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__annotations__">
+<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__annotations__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__cause__">
+<span class="sig-name descname"><span class="pre">__cause__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__cause__" title="Permalink to this definition"></a></dt>
+<dd><p>exception cause</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__context__">
+<span class="sig-name descname"><span class="pre">__context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__context__" title="Permalink to this definition"></a></dt>
+<dd><p>exception context</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__delattr__">
+<span class="sig-name descname"><span class="pre">__delattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__delattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__dict__">
+<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'motor_abstraction.utils.exceptions',</span> <span class="pre">'__doc__':</span> <span class="pre">'\n</span>&#160;&#160;&#160; <span class="pre">Raised</span> <span class="pre">when</span> <span class="pre">operational</span> <span class="pre">safety</span> <span class="pre">is</span> <span class="pre">compromised.\n</span>&#160;&#160;&#160; <span class="pre">',</span> <span class="pre">'__annotations__':</span> <span class="pre">{}})</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__dict__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__getattribute__">
+<span class="sig-name descname"><span class="pre">__getattribute__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__getattribute__" title="Permalink to this definition"></a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__module__">
+<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'motor_abstraction.utils.exceptions'</span></em><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__module__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__new__">
+<span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__new__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__reduce__">
+<span class="sig-name descname"><span class="pre">__reduce__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__reduce__" title="Permalink to this definition"></a></dt>
+<dd><p>Helper for pickle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__setattr__">
+<span class="sig-name descname"><span class="pre">__setattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__setattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__setstate__">
+<span class="sig-name descname"><span class="pre">__setstate__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__setstate__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__suppress_context__">
+<span class="sig-name descname"><span class="pre">__suppress_context__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__suppress_context__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__traceback__">
+<span class="sig-name descname"><span class="pre">__traceback__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__traceback__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.__weakref__">
+<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.__weakref__" title="Permalink to this definition"></a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.utils.exceptions.SafetyException.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.utils.exceptions.SafetyException.with_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="motor_abstraction.utils.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="motor_abstraction.utils.fallback.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

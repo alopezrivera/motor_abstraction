@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstract Motor Class &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="motor_abstraction.communicator.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="motor_abstraction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Motor Abstraction
+            <img src="_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="motor_abstraction.html">&lt;no title&gt;</a> &raquo;</li>
+      <li>Abstract Motor Class</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/motor_abstraction.abstract_motor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-motor_abstraction.abstract_motor"></span><section id="abstract-motor-class">
+<h1>Abstract Motor Class<a class="headerlink" href="#abstract-motor-class" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AbstractMotor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p><strong>Abstract Motor Class</strong></p>
+<p>Required attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">motor_id</span></code>
+Motor ID (hexadecimal or otherwise). This is used both for
+low level communication and to refer to individual motors
+in communication with the user.</p></li>
+</ul>
+<p>Recommended attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">motor</span></code>
+Motor object containing methods for low-level motor control.
+It may be provided by the user or by a library. For further
+reference consider the T-Motor AK80-6 and AK80-9 interfaces 
+provided by <a class="reference external" href="https://github.com/dfki-ric-underactuated-lab/mini-cheetah-tmotor-python-can">mini-cheetah-tmotor-python-can</a> 
+(<a class="reference external" href="https://pypi.org/project/mini-cheetah-motor-driver-socketcan/">pip</a>).</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__getattribute__">
+<span class="sig-name descname"><span class="pre">__getattribute__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__getattribute__" title="Permalink to this definition"></a></dt>
+<dd><p><strong>Override attribute retrieval.</strong></p>
+<p>Conduct motor configuration validation at attribute
+retrieval time, and apply boilerplate to communicate
+the motor’s state after all commands and provide the
+user with logs.</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Motor configuration validation</dt><dd><ul class="simple">
+<li><p>Ensure motor instance has all required attributes</p></li>
+<li><p>Ensure motor instance has a declared <code class="docutils literal notranslate"><span class="pre">rest_state</span></code> 
+before calling any function other than <code class="docutils literal notranslate"><span class="pre">__init__</span></code> 
+or <code class="docutils literal notranslate"><span class="pre">rest_state</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Function boilerplate</dt><dd><ul class="simple">
+<li><p>Push motor state via provided communication protocol after all motor commands</p></li>
+<li><p>Log motor disabling</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__getattr__">
+<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__getattr__" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve unknown attributes from motor controller.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor._command">
+<span class="sig-name descname"><span class="pre">_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn_command</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor._command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor._disable">
+<span class="sig-name descname"><span class="pre">_disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn_disable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor._disable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.rest_state">
+<span class="sig-name descname"><span class="pre">rest_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.rest_state" title="Permalink to this definition"></a></dt>
+<dd><p>Set rest state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__init__">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__init__" title="Permalink to this definition"></a></dt>
+<dd><p><strong>Abstract Motor Class</strong></p>
+<p>Required attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">motor_id</span></code>
+Motor ID (hexadecimal or otherwise). This is used both for
+low level communication and to refer to individual motors
+in communication with the user.</p></li>
+</ul>
+<p>Recommended attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">motor</span></code>
+Motor object containing methods for low-level motor control.
+It may be provided by the user or by a library. For further
+reference consider the T-Motor AK80-6 and AK80-9 interfaces 
+provided by <a class="reference external" href="https://github.com/dfki-ric-underactuated-lab/mini-cheetah-tmotor-python-can">mini-cheetah-tmotor-python-can</a> 
+(<a class="reference external" href="https://pypi.org/project/mini-cheetah-motor-driver-socketcan/">pip</a>).</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.enable">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.enable" title="Permalink to this definition"></a></dt>
+<dd><p>Enable motor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.zero">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.zero" title="Permalink to this definition"></a></dt>
+<dd><p>Zero at current motor position</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.rest">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.rest" title="Permalink to this definition"></a></dt>
+<dd><p>Rest position command</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.command">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.command" title="Permalink to this definition"></a></dt>
+<dd><p>Motor command</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.disable">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.disable" title="Permalink to this definition"></a></dt>
+<dd><p>Disable motor</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__abstractmethods__">
+<span class="sig-name descname"><span class="pre">__abstractmethods__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'__init__',</span> <span class="pre">'command',</span> <span class="pre">'disable',</span> <span class="pre">'enable',</span> <span class="pre">'rest',</span> <span class="pre">'zero'})</span></em><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__abstractmethods__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__dict__">
+<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'motor_abstraction.abstract_motor',</span> <span class="pre">'__getattribute__':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.__getattribute__&gt;,</span> <span class="pre">'__getattr__':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.__getattr__&gt;,</span> <span class="pre">'_command':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor._command&gt;,</span> <span class="pre">'_disable':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor._disable&gt;,</span> <span class="pre">'rest_state':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.rest_state&gt;,</span> <span class="pre">'__init__':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.__init__&gt;,</span> <span class="pre">'enable':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.enable&gt;,</span> <span class="pre">'zero':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.zero&gt;,</span> <span class="pre">'rest':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.rest&gt;,</span> <span class="pre">'command':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.command&gt;,</span> <span class="pre">'disable':</span> <span class="pre">&lt;function</span> <span class="pre">AbstractMotor.disable&gt;,</span> <span class="pre">'__dict__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__dict__'</span> <span class="pre">of</span> <span class="pre">'AbstractMotor'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__weakref__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__weakref__'</span> <span class="pre">of</span> <span class="pre">'AbstractMotor'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__doc__':</span> <span class="pre">None,</span> <span class="pre">'__abstractmethods__':</span> <span class="pre">frozenset({'disable',</span> <span class="pre">'enable',</span> <span class="pre">'command',</span> <span class="pre">'__init__',</span> <span class="pre">'zero',</span> <span class="pre">'rest'}),</span> <span class="pre">'_abc_impl':</span> <span class="pre">&lt;_abc_data</span> <span class="pre">object&gt;,</span> <span class="pre">'__annotations__':</span> <span class="pre">{}})</span></em><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__dict__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__module__">
+<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'motor_abstraction.abstract_motor'</span></em><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__module__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__slots__">
+<span class="sig-name descname"><span class="pre">__slots__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__slots__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor.__weakref__">
+<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor.__weakref__" title="Permalink to this definition"></a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="motor_abstraction.abstract_motor.AbstractMotor._abc_impl">
+<span class="sig-name descname"><span class="pre">_abc_impl</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_abc_data</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#motor_abstraction.abstract_motor.AbstractMotor._abc_impl" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="motor_abstraction.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="motor_abstraction.communicator.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

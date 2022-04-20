@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Motor Abstraction
+            <img src="../../../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../motor_abstraction.abstract_motor.html">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Math</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/primer/chapters/01.primer/01.math.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="math">
+<h1>Math<a class="headerlink" href="#math" title="Permalink to this headline"></a></h1>
+<div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span># Inline equations
+<span class="na">:math:</span><span class="nv">`&lt;inline equation&gt;`</span>
+
+# Unnumbered block equations
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+    &lt;block equation&gt;
+
+# Numbered block equations
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+    <span class="nc">:label:</span> <span class="nt">&lt;equation label&gt;</span>
+
+    &lt;block equation&gt;
+
+# Block equations in environment of choice
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+    <span class="nc">:label:</span> <span class="nt">&lt;equation label&gt;</span>
+    <span class="nc">:nowrap:</span>
+
+    \begin{environment of choice}
+        &lt;block equation&gt;
+    \end{environment of choice}
+</pre></div>
+</div>
+<p>Inline equation: <img class="math" src="../../../_images/math/43fffe470b7ca316a34f87a6786ad8dc2ef823e1.svg" alt="e^{\pi i} = -1"/>.</p>
+<p>Block equations. Unlabeled, and thus unnumbered,</p>
+<div class="math">
+<p><img src="../../../_images/math/dbd2acd09faac66078a3cab8b938ba1c2e9b7307.svg" alt="e^{\pi i} = -1"/></p>
+</div><p>and labeled and thus numbered <a class="reference internal" href="#equation-equation1">()</a>.</p>
+<div class="math" id="equation-equation1">
+<p><span class="eqno">()<a class="headerlink" href="#equation-equation1" title="Permalink to this equation"></a></span><img src="../../../_images/math/dbd2acd09faac66078a3cab8b938ba1c2e9b7307.svg" alt="e^{\pi i} = -1"/></p>
+</div><p>By default Sphinx will place your LaTeX equations inside
+of an <code class="docutils literal notranslate"><span class="pre">equation</span></code> LaTeX environment.
+You can overrride this with the <code class="docutils literal notranslate"><span class="pre">:nowrap:</span></code> attribute of the
+<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">math::</span></code> directive. As HTML math consists of your LaTeX
+equations rendered and exported in SVG format, <code class="docutils literal notranslate"><span class="pre">:nowrap:</span></code>
+equations will display normally in HTML.</p>
+<p>The equation below lies within a user-specified LaTeX environment.</p>
+<div class="math">
+<p><img src="../../../_images/math/21c18e9a68f5089e7134b64c7e17e4cd38c56220.svg" alt="\begin{equation*}
+    \begin{aligned}
+    \max_{\rho,\lambda} \quad &amp; \rho \\
+                                &amp; (x^Tx)^d(V(x) - \rho) + \lambda(x)\dot{V}(x) \quad is \quad SOS
+    \end{aligned}
+\end{equation*}"/></p>
+</div><div class="danger admonition">
+<p class="admonition-title">BEWARE</p>
+<p><strong>User-specified equation environments will break equation
+labeling in LaTeX</strong>. In particular, it seems that Sphinx will internally
+replace the reference to the new equation by a reference to the previous
+equation. This happens both for numbered and unnumbered LaTeX equation
+environments.</p>
+<p>If you are considering user-specified equation environments, make
+absolutely sure you cannot obtain what you desire within the <code class="docutils literal notranslate"><span class="pre">equation</span></code>
+environment.</p>
+<p>If you wish to do so anyway, and <strong>wish to label your equations</strong> for
+cross-referencing in your <strong>site documentation</strong> at the expense of that
+in LaTeX form, make sure to <strong>use an unnumbered equation environment</strong> such
+as <code class="docutils literal notranslate"><span class="pre">equation*</span></code>:</p>
+<div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+    <span class="nc">:label:</span> equation2
+    <span class="nc">:nowrap:</span>
+
+    \begin{equation*}
+        \begin{aligned}
+        \max_{\rho,\lambda} \quad &amp; \rho \\
+                                    &amp; (x^Tx)^d(V(x) - \rho) + \lambda(x)\dot{V}(x) \quad is \quad SOS
+        \end{aligned}
+    \end{equation*}
+</pre></div>
+</div>
+<p>Otherwise, the HTML rendering of your equations will display two numberings:
+that assigned to it by the LaTeX renderer used to generate the site’s SVG equations,
+and that later assigned to it by Sphinx.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

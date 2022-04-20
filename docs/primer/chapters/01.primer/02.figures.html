@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figures &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Motor Abstraction
+            <img src="../../../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../motor_abstraction.abstract_motor.html">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Figures</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/primer/chapters/01.primer/02.figures.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="figures">
+<h1>Figures<a class="headerlink" href="#figures" title="Permalink to this headline"></a></h1>
+<p>Figures must be included in <code class="docutils literal notranslate"><span class="pre">source/figures</span></code> and referenced
+by their path <strong>relative to the current reStructuredText file</strong>.
+Sphinx has two figure directives: <code class="docutils literal notranslate"><span class="pre">image</span></code> and <code class="docutils literal notranslate"><span class="pre">figure</span></code>.</p>
+<section id="image">
+<h2><code class="docutils literal notranslate"><span class="pre">image</span></code><a class="headerlink" href="#image" title="Permalink to this headline"></a></h2>
+<p>Uncaptioned figures. Allow side-by-side arrangements.</p>
+<div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span># Single image
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../../figures/demo.png
+
+# Side by side arrangement
+|pic1| |pic2|
+
+<span class="p">..</span> <span class="nt">|pic1|</span> <span class="ow">image</span><span class="p">::</span> ../../figures/demo.png
+<span class="nc">:width:</span> 45%
+
+<span class="p">..</span> <span class="nt">|pic2|</span> <span class="ow">image</span><span class="p">::</span> ../../figures/demo.png
+<span class="nc">:width:</span> 45%
+</pre></div>
+</div>
+<p>Single image:</p>
+<img alt="../../../_images/demo.png" src="../../../_images/demo.png" />
+<hr class="docutils" />
+<p>Side by side:</p>
+<p class="center"><a class="reference internal" href="../../../_images/demo.png"><img alt="pic1" src="../../../_images/demo.png" style="width: 45%;" /></a>    <a class="reference internal" href="../../../_images/demo.png"><img alt="pic2" src="../../../_images/demo.png" style="width: 45%;" /></a></p>
+</section>
+<section id="figure">
+<h2><code class="docutils literal notranslate"><span class="pre">figure</span></code><a class="headerlink" href="#figure" title="Permalink to this headline"></a></h2>
+<p>Captioned figures. Do not allow side-by-side arrangements.</p>
+<div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span># Figure without caption
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> ../../figures/demo.png
+    <span class="nc">:width:</span> 50%
+    <span class="nc">:align:</span> center
+
+# Figure with caption, labeled &quot;figure1&quot;
+<span class="p">..</span> <span class="nt">_figure1:</span>
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> ../../figures/demo.png
+    <span class="nc">:width:</span> 50%
+    <span class="nc">:align:</span> center
+
+    Caption
+</pre></div>
+</div>
+<p>Figure without caption or label.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/demo.png"><img alt="../../../_images/demo.png" src="../../../_images/demo.png" style="width: 50%;" /></a>
+</figure>
+<hr class="docutils" />
+<figure class="align-center" id="id1">
+<span id="figure1"></span><a class="reference internal image-reference" href="../../../_images/demo.png"><img alt="../../../_images/demo.png" src="../../../_images/demo.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">Captioned and labelled figure.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

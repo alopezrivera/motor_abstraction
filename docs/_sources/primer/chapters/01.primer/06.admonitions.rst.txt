@@ -1,0 +1,57 @@
+Admonitions
+===========
+
+.. important::
+
+    You can use admonitions to bring attention to
+    important information.
+
+Default
+-------
+
+.. note::
+
+    For the full list of reStructuredText admonitions, visit
+    the `docutils reStructuredText admonitions reference <https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions>`_.
+
+    Quoting from the `Sphinx directives reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#directives>`_, 
+    *Most themes style only “note” and “warning” specially*.
+
+reStructuredText provides a set of default admonitions. The syntax is the following:
+
+.. code-block:: reStructuredText
+ 
+    .. important::
+
+        Of import
+    
+    .. note::
+
+        Note
+
+    .. warning::
+
+        Warning
+
+    .. danger::
+
+        Danger
+
+Custom
+------
+
+.. admonition:: Custom Admonition
+    :class: danger
+
+    A dangerous admonition.
+
+You can use the base ``.. admonition::`` directive
+to create custom admonitions based on the predetermined
+admonition CSS classes, or custom ones provided by yourself.
+
+.. code-block:: reStructuredText
+
+    .. admonition:: Custom Admonition
+        :class: danger
+
+        A dangerous admonition.

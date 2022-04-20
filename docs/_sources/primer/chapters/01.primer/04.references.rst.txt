@@ -1,0 +1,61 @@
+References
+==========
+
+Sphinx supports citations, cross-references and hyperlinks.
+
+Citations
+---------
+
+.. code-block:: reStructuredText
+
+    # In-text
+    :cite:t:`Tedrake`
+
+    # Parenthetic
+    :cite:p:`Tedrake`
+
+You can cite :cite:t:`Tedrake` in text, or parenthetic fashion :cite:p:`Tedrake`.
+
+Cross-references
+----------------
+
+.. note::
+
+    If you wish to create cross-references to paragraphs, in-text targets, 
+    etc. consult the `Sphinx cross-referencing guide <https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html>`.
+
+.. code-block:: reStructuredText
+
+    # Figures
+    :numref:`<figure label>`
+
+    # Equations
+    :eq:`<equation label>`
+
+    # Sections
+    :ref:`<Section Name>`
+
+- :numref:`table1`
+- :numref:`figure1`
+- Equation :eq:`equation1`
+- :ref:`Your Project`
+
+.. warning::
+
+    Only the **top level section labels** are automatically created by
+    ``sphinx.autosectionlabel``.
+    If you wish to reference a subsection, create a label to it as follows.
+
+    .. code-block:: reStructuredText
+
+        .. _Subsection1:
+
+        Subsection 1
+        ------------
+
+Hyperlinks
+----------
+
+.. code-block:: reStructuredText
+
+    `Link text <url>`_

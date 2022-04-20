@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primer &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Motor Abstraction
+            <img src="../../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../motor_abstraction.abstract_motor.html">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Primer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/primer/chapters/01.primer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="primer">
+<h1>Primer<a class="headerlink" href="#primer" title="Permalink to this headline"></a></h1>
+<div class="note admonition">
+<p class="admonition-title">References</p>
+<p>For a more in-depth and possibly up-to-date description of the
+capabilities of reStructuredText and Sphinx, refer to the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer">Sphinx reStructuredText primer</a>.</p>
+<p>Other references:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#images">reStructuredText reference: figures</a></p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">reStructuredText reference: directives</a></p></li>
+</ul>
+</div>
+<p><strong>reStructuredText</strong> allows you flexibility close to that of
+LaTeX with terser syntax. Both LaTeX and HTML are rendered
+from it, abstracting content from typesetting. Sphinx reStructuredText
+supports LaTeX math, citations, cross-refernces, lists, figures, tables,
+text highlight markup, file inclusion and more.</p>
+<div class="important admonition">
+<p class="admonition-title">Benefits</p>
+<ul class="simple">
+<li><p>Write a <strong>singular</strong>, <strong>pleasant to read</strong> documentation source for your project.</p></li>
+<li><p>Customize LaTeX and HTML output with <strong>content agnostic</strong> LaTeX style files and HTML+CSS templates (starting with Sphinx’s) <strong>usable across all your projects</strong>.</p></li>
+</ul>
+<p>And lastly,</p>
+<ul class="simple">
+<li><p>Document your project directly from the <strong>docstrings</strong> of your code.</p></li>
+</ul>
+</div>
+<p>What follows is a demonstration of the fundamental capabilities
+of Sphinx reStructuredText for technical writing, as well as
+best practices for writing and generating documentation with Sphinx.</p>
+<p>Much of the same will be demonstrated again in <span class="xref std std-ref">Your Project</span>,
+with a twist: <span class="xref std std-ref">Your Project</span> is generated directly from the
+source code in this project.</p>
+<div class="danger admonition">
+<p class="admonition-title">MIND THE BACKTICKS</p>
+<p>reStructuredText makes use of <strong>backticks</strong> (U+0060 <em>GRAVE ACCENT</em>)
+for its commands.</p>
+<p><strong>Not to be confused for apostrophes (</strong> <code class="docutils literal notranslate"><span class="pre">'</span></code> <strong>)!</strong></p>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/01.math.html">Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/02.figures.html">Figures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/02.figures.html#image"><code class="docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/02.figures.html#figure"><code class="docutils literal notranslate"><span class="pre">figure</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/03.tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/04.references.html">References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/04.references.html#citations">Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/04.references.html#cross-references">Cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/04.references.html#hyperlinks">Hyperlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/05.markup.html">Markup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/05.markup.html#inline">Inline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/05.markup.html#blocks">Blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01.primer/05.markup.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/06.admonitions.html">Admonitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/06.admonitions.html#default">Default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/06.admonitions.html#custom">Custom</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01.primer/07.extensions.html">Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.primer/07.extensions.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01.primer/07.extensions.html#center">Center</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

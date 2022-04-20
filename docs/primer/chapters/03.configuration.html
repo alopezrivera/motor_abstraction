@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration &mdash; Motor Abstraction 0.0.0.a0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/classes.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Motor Abstraction
+            <img src="../../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../motor_abstraction.abstract_motor.html">Abstract Motor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Motor Abstraction</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/primer/chapters/03.configuration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h1>
+<p>Sphinx must be configured to:</p>
+<ol class="arabic simple">
+<li><p>Find your project’s source code</p></li>
+<li><p>Correctly display your project’s information</p></li>
+</ol>
+<section id="project-py">
+<h2><code class="docutils literal notranslate"><span class="pre">project.py</span></code><a class="headerlink" href="#project-py" title="Permalink to this headline"></a></h2>
+<p>This file includes the information that Sphinx
+needs to build a documentation site and LaTeX
+report for your project, as well as the fundamental
+details of your project that will be rendered across
+the site and report.</p>
+<div class="danger admonition">
+<p class="admonition-title">CODE GENERATION</p>
+<p>These variables must be correctly set, or
+Sphinx will fail to run.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">codename</span></code></dt><dd><p>Name of your project’s Python package.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">codedir</span></code></dt><dd><p>Code directory relative to your projects source directory,
+where the source directory is understood to be the <strong>parent
+of the docs directory</strong>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">PROJECT INFORMATION</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">report_title</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">report_author</span></code></p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">logo</span></code></dt><dd><p>Logo filename relative to the <code class="docutils literal notranslate"><span class="pre">source/figures</span></code> directory.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</section>
+<section id="project-sty">
+<h2><code class="docutils literal notranslate"><span class="pre">project.sty</span></code><a class="headerlink" href="#project-sty" title="Permalink to this headline"></a></h2>
+<p>This file contains information about your project
+as it will be rendered in LaTeX.</p>
+<div class="warning admonition">
+<p class="admonition-title">PROJECT INFORMATION</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">institution</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colorHeader</span></code></p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
