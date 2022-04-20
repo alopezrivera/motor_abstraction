@@ -80,6 +80,14 @@ bibtex_bibfiles = ['bibliography.bib']
 # Extract documentation from the __init__ function of classes
 autoclass_content = 'init'
 
+# Include private methods
+autodoc_default_options = {"members": True,
+                           "undoc-members": True,
+                           "private-members": True,
+                           'special-members': True, 
+                           'inherited-members': True,
+                           'show-inheritance': True}
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.

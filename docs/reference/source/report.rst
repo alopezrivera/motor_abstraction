@@ -20,12 +20,9 @@ This title will not display
    Remember however: this will cause __everything__ in your package's __init__.py 
    to __not__ render.
 
-.. include:: intro.rst
-
 .. toctree::
     :glob:
     :caption: Table of Contents
     
-    chapters/*
-    project    
+    motor_abstraction
     bibliography

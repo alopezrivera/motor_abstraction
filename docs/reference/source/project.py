@@ -1,6 +1,6 @@
 # -- Project information -----------------------------------------------------
 
-project = 'Project'
+project = 'Motor Abstraction'
 author  = 'Author'
 
 # Project code name

@@ -1,17 +1,14 @@
 .. You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the |project| documentation!
+Welcome to the |motor_abstraction| documentation!
 =======================================
-
-.. include:: intro.rst
 
 .. toctree::
     :glob:
     :caption: Table of Contents
     
-    chapters/*
-    project
+    motor_abstraction
     bibliography
 
 Indices and tables
