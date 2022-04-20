@@ -2,7 +2,7 @@ import logging
 import traceback
 from functools import wraps
 
-from utils.shout import shout_error, shout_disabled
+from motor_abstraction.utils.shout import shout_error, shout_disabled
 
 
 def fallback_disable(goal):
