@@ -1,0 +1,3 @@
+# Motor Abstraction
+
+![](diagram.png)
