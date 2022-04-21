@@ -1,4 +1,4 @@
-.. automodule:: motor_abstraction.config
+.. automodule:: motor_abstraction.mjbots
     :members:
     :undoc-members:
     :show-inheritance:

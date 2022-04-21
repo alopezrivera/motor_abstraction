@@ -1,4 +1,4 @@
-.. automodule:: motor_abstraction.config
+.. automodule:: motor_abstraction.tmotor
     :members:
     :undoc-members:
     :show-inheritance:
