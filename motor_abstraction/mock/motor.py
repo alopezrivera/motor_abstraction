@@ -6,10 +6,6 @@ from motor_abstraction.mock.driver import TestDriver
 
 class TestMotor(AbstractMotor):
 
-    """
-    Test motor class
-    """
-
     # Motor characteristics
     torque_max = 12
 
@@ -18,6 +14,9 @@ class TestMotor(AbstractMotor):
                  can_port, motor_id, 
                  kp, kd,
                  **kwargs):
+        """
+        Test motor class
+        """
 
         self.motor_id = motor_id
 
