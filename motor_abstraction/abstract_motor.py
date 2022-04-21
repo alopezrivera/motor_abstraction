@@ -34,18 +34,23 @@ class AbstractMotor(ABC):
         get = lambda obj, attr: super(ABC, obj).__getattribute__(attr)
 
         try:
-
+            
             # Attempt to retrieve attribute from instance
             attribute = get(self, name)
 
             if callable(attribute):
                 
-                # Ensure motor instance has all required attributes
-                if name != '__init__':
+                # Ensure motor instance has all required attributes when
+                # calling non-configuration and non-safety-critical methods.
+                config_methods = ['__init__', 'rest_state']
+                safety_methods = ['disable']
+                allowed_methods = config_methods + safety_methods
+                
+                if name not in allowed_methods:
                     
+                    # Ensure motor instance has all required attributes
                     req_attrs = ['motor', 'motor_id', 'protocol', 'kp', 'kd', 'torque_max']
                     ins_attrs = {**get(self, '__dict__'), **get(self, '__class__').__dict__}.keys()
-
                     for req_attr in req_attrs:
                         try:
                             assert req_attr in ins_attrs
@@ -55,12 +60,12 @@ class AbstractMotor(ABC):
                             lst = [f'{ra}' for ra in req_attrs]
                             raise ConfigurationError(msg, add, lst)
 
-                # Ensure motor instance has a declared ``rest_state`` before calling any function other than ``__init__`` or ``rest_state``
-                if 'x_r' not in ins_attrs  and name not in ['__init__', 'rest_state']:
-                    msg = f"rest state has not been set for {get(self, '__class__').__name__} with motor ID \"0x0{self.motor_id}\"."
-                    add = f"The rest state must be set with \"{get(self, '__class__').__name__}.rest_state\" before calling any motor control method."
-                    raise SafetyException(msg, add)
-            
+                    # Ensure motor instance has a declared ``rest_state``
+                    if 'x_r' not in ins_attrs:
+                        msg = f"rest state has not been set for {get(self, '__class__').__name__} with motor ID \"0x0{self.motor_id}\"."
+                        add = f"The rest state must be set with \"{get(self, '__class__').__name__}.rest_state\" before calling any motor control method."
+                        raise SafetyException(msg, add)
+
                 # Declare motor disabling
                 if name == 'disable':
                     return lambda *args, **kwargs: get(self, '_disable')(attribute, *args, **kwargs)
