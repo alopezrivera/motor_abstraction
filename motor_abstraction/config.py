@@ -1,4 +1,6 @@
 import yaml
+import moteus
+from copy import deepcopy as dc
 from importlib import import_module
 
 
@@ -8,20 +10,44 @@ def load(robot):
     with open(robot, "r") as stream:
         robot = yaml.safe_load(stream)
 
-    # Initialize motors
-    motors = []
+    # Process motor configs
     getmod = lambda module: import_module(f"motor_abstraction.{module}")
-    for motor_config in robot.values():
+    
+    for config in robot.values():
         
         # Communication protocol
-        _protocol_confg = {k: motor_config.pop(k) for k in motor_config.keys() & {'topic', 'freq', 'generate_bindings'}}
-        _protocol_class = getattr(getmod('communicator'), f"{motor_config.pop('protocol')}")
+        _protocol_confg        = {k: config.pop(k) for k in config.keys() & {'topic', 'freq', 'generate_bindings'}}
+        _protocol_class        = getattr(getmod('communicator'), f"{config.pop('protocol')}")
+        config['protocol'] = _protocol_class(**_protocol_confg)
         # Motor class
-        _motor_class    = getattr(getmod(motor_config.pop('manufacturer')), motor_config.pop('model'))
-        # Initialize
-        _protocol       = _protocol_class(**_protocol_confg)
-        _motor          = _motor_class(protocol=_protocol, **motor_config)
+        config['class']    = getattr(getmod(config.pop('manufacturer')), config.pop('model'))
 
-        motors.append(_motor)
+    ##################################
+    # Motor-specific post-processing #
+    ##################################
+
+    # mjbots
+    # ----------------------- test
+    # mjbots = [robot.pop(name).pop('class') for name, config in dc(robot).items() if 'mjbots' in robot[name]['class'].__module__]
+    # print(mjbots)
+    # print(robot)
+    # ----------------------- test
+    get_mjbots = lambda param: [config[param] for config in robot.values() if 'mjbots' in config['class'].__module__]
+    transport  = moteus_pi3hat.Pi3HatRouter(
+        servo_bus_map={
+            get_mjbots('bus_id'): get_mjbots('motor_id'),
+        },
+    )
+    mjbots = [robot.pop(name).pop('class')(**config) for name, config in dc(robot).items() if 'mjbots' in robot[name]['class'].__module__]
+
+    
+
+    # for conf in motor_configs:
+    #     print('mjbots' in conf['class'].__module__)
+
+    ##################################
+    #        Initialize motors       #
+    ##################################
+    # motors = [conf.pop('class')(**conf) for conf in motor_configs]
 
     return motors
