@@ -1,9 +1,9 @@
 import yaml
-import moteus
 from copy import deepcopy as dc
 from importlib import import_module
 
 from motor_abstraction.config.postprocessing import mjbots
+
 
 def load(robot):
 
@@ -13,12 +13,10 @@ def load(robot):
 
     # Process motor configs
     getmod = lambda module: import_module(f"motor_abstraction.{module}")
-    
     for config in robot.values():
-        
         # Communication protocol
-        _protocol_confg        = {k: config.pop(k) for k in config.keys() & {'topic', 'freq', 'generate_bindings'}}
-        _protocol_class        = getattr(getmod('communicator'), f"{config.pop('protocol')}")
+        _protocol_confg    = {k: config.pop(k) for k in config.keys() & {'topic', 'freq', 'generate_bindings'}}
+        _protocol_class    = getattr(getmod('communicator'), f"{config.pop('protocol')}")
         config['protocol'] = _protocol_class(**_protocol_confg)
         # Motor class
         config['class']    = getattr(getmod(config.pop('manufacturer')), config.pop('model'))
@@ -26,12 +24,8 @@ def load(robot):
     ##################################
     # Motor-specific post-processing #
     ##################################
-
     # mjbots
-    # ----------------------- test
     _mjbots = mjbots(robot)
-    print(_mjbots)
-    print(robot)
 
     #################################
     #       Initialize motors       #
