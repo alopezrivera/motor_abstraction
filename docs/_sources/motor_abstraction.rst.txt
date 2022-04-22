@@ -10,11 +10,11 @@
 
        motor_abstraction.abstract_motor
        motor_abstraction.communicator
-       motor_abstraction.config
        motor_abstraction.mjbots
        motor_abstraction.tmotor
     .. toctree::
        :maxdepth: 1
 
+       motor_abstraction.config
        motor_abstraction.utils
 
