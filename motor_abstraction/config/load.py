@@ -19,17 +19,14 @@ def load(robot):
         _protocol_class    = getattr(getmod('communicator'), f"{config.pop('protocol')}")
         config['protocol'] = _protocol_class(**_protocol_confg)
         # Motor class
-        config['class']    = getattr(getmod(config.pop('manufacturer')), config.pop('model'))
-
-    ##################################
-    # Motor-specific post-processing #
-    ##################################
-    # mjbots
-    _mjbots = mjbots(robot)
+        config['class']    = getattr(getmod(config.pop('manufacturer')), config.pop('model'))    
 
     #################################
     #       Initialize motors       #
     #################################
-    motors = [conf.pop('class')(**conf) for conf in robot.values()]
+    # mjbots
+    _mjbots = mjbots(robot)
 
-    return motors
+    motors = _mjbots
+
+    return motors[0] if len(motors) == 1 else motors

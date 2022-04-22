@@ -11,8 +11,11 @@ class qdd100(AbstractMotor):
 
     # Motor characteristics
     torque_max = 12
+    kp = 100
+    kd = 2
 
     def __init__(self,
+                 motor_id,
                  protocol,
                  transport,
                  kp, kd,
@@ -20,6 +23,15 @@ class qdd100(AbstractMotor):
         """
         **mjbots qdd100**
         """
+
+        # Validate inputs
+        for var in [kp, kp]:
+            if isinstance(var, str):
+                var = float(var)
+        for var in [motor_id]:
+            print(f'MOTOR_ID TYPE: {type(var)}')
+            if isinstance(var, str):
+                var = int(var)
 
         self.motor_id = motor_id
 
@@ -30,20 +42,20 @@ class qdd100(AbstractMotor):
         self.motor = moteus.Controller(id=motor_id, transport=transport)
 
         # Configuration
-        self.kp_scale = kp/self.kp_default
-        self.kd_scale = kd/self.kd_default
-        self.torque_limit = max(kwargs.pop('torque_limit'), TestMotor.torque_max) if 'torque_limit' in kwargs.keys() else TestMotor.torque_max
+        self.kp_scale = kp/self.kp
+        self.kd_scale = kd/self.kd
+        self.torque_limit = max(kwargs.pop('torque_limit'), qdd100.torque_max) if 'torque_limit' in kwargs.keys() else qdd100.torque_max
 
         # Rest state
         if 'rest_state' in kwargs.keys():
             self.rest_state(kwargs['rest_state'])
 
         # Lock motor in place
-        self.disable()
+        # self.disable()
 
     @fallback_disable("enabling motor")
     async def enable(self):
-        self.motor.enable_motor()
+        pass
 
     @fallback_disable("zeroing motor")
     def zero(self):
@@ -74,4 +86,4 @@ class qdd100(AbstractMotor):
         return self.command([None, None, 0])
 
     async def disable(self):
-        return await self.motor.set_stop()
+        await self.motor.set_stop()

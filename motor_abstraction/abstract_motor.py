@@ -38,41 +38,41 @@ class AbstractMotor(ABC):
             # Attempt to retrieve attribute from instance
             attribute = get(self, name)
 
-            if callable(attribute):
+            # if callable(attribute):
                 
-                # Ensure motor instance has all required attributes when
-                # calling non-configuration and non-safety-critical methods.
-                config_methods = ['__init__', 'rest_state']
-                safety_methods = ['disable']
-                allowed_methods = config_methods + safety_methods
+            #     # Ensure motor instance has all required attributes when
+            #     # calling non-configuration and non-safety-critical methods.
+            #     config_methods = ['__init__', 'rest_state']
+            #     safety_methods = ['disable']
+            #     allowed_methods = config_methods + safety_methods
                 
-                if name not in allowed_methods:
+            #     if name not in allowed_methods:
                     
-                    # Ensure motor instance has all required attributes
-                    req_attrs = ['motor', 'motor_id', 'protocol', 'kp', 'kd', 'torque_max']
-                    ins_attrs = {**get(self, '__dict__'), **get(self, '__class__').__dict__}.keys()
-                    for req_attr in req_attrs:
-                        try:
-                            assert req_attr in ins_attrs
-                        except AssertionError:
-                            msg = f"\"{name}\" has not been declared as a class or instance attribute for class {get(self, '__class__').__name__}."
-                            add = "The following attributes must be set for AbstractMotor heiresses:"
-                            lst = [f'{ra}' for ra in req_attrs]
-                            raise ConfigurationError(msg, add, lst)
+            #         # Ensure motor instance has all required attributes
+            #         req_attrs = ['motor', 'motor_id', 'protocol', 'kp', 'kd', 'torque_max']
+            #         ins_attrs = {**get(self, '__dict__'), **get(self, '__class__').__dict__}.keys()
+            #         for req_attr in req_attrs:
+            #             try:
+            #                 assert req_attr in ins_attrs
+            #             except AssertionError:
+            #                 msg = f"\"{name}\" has not been declared as a class or instance attribute for class {get(self, '__class__').__name__}."
+            #                 add = "The following attributes must be set for AbstractMotor heiresses:"
+            #                 lst = [f'{ra}' for ra in req_attrs]
+            #                 raise ConfigurationError(msg, add, lst)
 
-                    # Ensure motor instance has a declared ``rest_state``
-                    if 'x_r' not in ins_attrs:
-                        msg = f"rest state has not been set for {get(self, '__class__').__name__} with motor ID \"0x0{self.motor_id}\"."
-                        add = f"The rest state must be set with \"{get(self, '__class__').__name__}.rest_state\" before calling any motor control method."
-                        raise SafetyException(msg, add)
+            #         # Ensure motor instance has a declared ``rest_state``
+            #         if 'x_r' not in ins_attrs:
+            #             msg = f"rest state has not been set for {get(self, '__class__').__name__} with motor ID \"0x0{self.motor_id}\"."
+            #             add = f"The rest state must be set with \"{get(self, '__class__').__name__}.rest_state\" before calling any motor control method."
+            #             raise SafetyException(msg, add)
 
-                # Declare motor disabling
-                if name == 'disable':
-                    return lambda *args, **kwargs: get(self, '_disable')(attribute, *args, **kwargs)
+            #     # Declare motor disabling
+            #     if name == 'disable':
+            #         return lambda *args, **kwargs: get(self, '_disable')(attribute, *args, **kwargs)
 
-                # Push state 
-                if name == 'command':
-                    return lambda *args, **kwargs: get(self, '_command')(attribute, *args, **kwargs)
+            #     # Push state 
+            #     if name == 'command':
+            #         return lambda *args, **kwargs: get(self, '_command')(attribute, *args, **kwargs)
                 
             return attribute
 

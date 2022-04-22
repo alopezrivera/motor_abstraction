@@ -21,23 +21,22 @@ def mjbots(robot):
         get_mjbots = lambda param: [config[param] for config in robot.values() if 'mjbots' in config['class'].__module__]
 
         # Transport configuration
-        servo_bus_map = {get_mjbots('bus_id'): get_mjbots('motor_id')}
+        assert isinstance(get_mjbots('bus_id')[0], int)
+        servo_bus_map = {get_mjbots('bus_id')[0]: get_mjbots('motor_id')}
 
         # Create transport
         try:
-            raspy_router = import_module('moteus.moteus_pi3hat')
+            raspy_router = import_module('moteus_pi3hat')
         except ModuleNotFoundError:
             shout_error('missing moteus_pi3hat')
             logging.error(traceback.format_exc())
             sys.exit()
-        transport  = moteus_pi3hat.Pi3HatRouter(
-            servo_bus_map={
-                get_mjbots('bus_id'): get_mjbots('motor_id'),
-            },
+        transport  = raspy_router.Pi3HatRouter(
+            servo_bus_map=servo_bus_map,
         )
 
         # Initialize motors
-        mjbots = [robot.pop(name).pop('class')(**config) for name, config in dc(robot).items() if 'mjbots' in robot[name]['class'].__module__]
+        mjbots = [robot.pop(name).pop('class')(**{**config, **{'transport': transport}}) for name, config in dc(robot).items() if 'mjbots' in robot[name]['class'].__module__]
 
         return mjbots
 
