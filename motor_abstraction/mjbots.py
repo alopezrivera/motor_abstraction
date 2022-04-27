@@ -29,7 +29,6 @@ class qdd100(AbstractMotor):
             if isinstance(var, str):
                 var = float(var)
         for var in [motor_id]:
-            print(f'MOTOR_ID TYPE: {type(var)}')
             if isinstance(var, str):
                 var = int(var)
 
@@ -65,7 +64,7 @@ class qdd100(AbstractMotor):
         pass
 
     @fallback_disable("reading motor state")
-    async def state():
+    async def state(self):
         return await self.motor.set_position(position=math.nan,
                                              query=True)
     
@@ -84,6 +83,10 @@ class qdd100(AbstractMotor):
     @fallback_disable("setting rest position")
     async def rest(self):
         return self.command([None, None, 0])
+
+    @fallback_disable("stopping motor")
+    async def stop(self):
+        await self.motor.set_stop()
 
     async def disable(self):
         await self.motor.set_stop()
