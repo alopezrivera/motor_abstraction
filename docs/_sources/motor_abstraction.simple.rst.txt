@@ -1,0 +1,4 @@
+.. automodule:: motor_abstraction.simple
+    :members:
+    :undoc-members:
+    :show-inheritance:
