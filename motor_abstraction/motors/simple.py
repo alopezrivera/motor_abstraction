@@ -91,5 +91,6 @@ class qdd100(LCMSyncedObject,AbstractMotor, moteus.Controller):
     def disable(self):
         pass
 
+
 a = qdd100()
 a.pull()
